@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FirstViewController-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" title="FirstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" customClass="FirstViewController" customModule="Where_To" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BOW-Sa-fSr"/>
+                        <viewControllerLayoutGuide type="bottom" id="bUV-T5-ivq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xef-St-Iia">
+                                <rect key="frame" x="0.0" y="44" width="414" height="820"/>
+                                <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
+                                    <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="YES"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xef-St-Iia" secondAttribute="trailing" id="JRc-aA-6D7"/>
+                            <constraint firstItem="xef-St-Iia" firstAttribute="top" secondItem="BOW-Sa-fSr" secondAttribute="bottom" id="TMv-66-12g"/>
+                            <constraint firstItem="xef-St-Iia" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="aHN-Sc-6PV"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xef-St-Iia" secondAttribute="bottom" constant="-51" id="uIs-BV-DQQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" landscapeImage="house.fill" id="acW-dT-cKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="-248"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="u0G-Mi-FDA">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" interfaceStyle="light" id="Xnd-jH-ZY8" customClass="ViewController" customModule="Where_To" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hKZ-S0-a1W"/>
+                        <viewControllerLayoutGuide type="bottom" id="9lj-Cc-vdn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j7F-zF-8Gx" userLabel="Video Preview">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="myl-6X-7z5" userLabel="Results">
+                                <rect key="frame" x="0.0" y="668" width="414" height="145"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elapsed Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jL-4p-eir" userLabel="Prediction">
+                                        <rect key="frame" x="8" y="67.5" width="386" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Time " textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB6-Pf-bCS" userLabel="Time Label">
+                                        <rect key="frame" x="8" y="96" width="386" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="9jL-4p-eir" firstAttribute="top" secondItem="myl-6X-7z5" secondAttribute="top" constant="67.5" id="Jeg-c3-AcO"/>
+                                    <constraint firstItem="9jL-4p-eir" firstAttribute="leading" secondItem="mB6-Pf-bCS" secondAttribute="leading" id="YF0-AZ-jMM"/>
+                                    <constraint firstItem="9jL-4p-eir" firstAttribute="trailing" secondItem="mB6-Pf-bCS" secondAttribute="trailing" id="hDa-QU-wre"/>
+                                    <constraint firstItem="mB6-Pf-bCS" firstAttribute="top" secondItem="9jL-4p-eir" secondAttribute="bottom" constant="8" symbolic="YES" id="oe5-CF-tK2"/>
+                                    <constraint firstItem="9jL-4p-eir" firstAttribute="leading" secondItem="myl-6X-7z5" secondAttribute="leadingMargin" id="u8X-HM-ZUK"/>
+                                    <constraint firstAttribute="trailing" secondItem="9jL-4p-eir" secondAttribute="trailing" constant="20" id="yes-Yj-CM4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="myl-6X-7z5" firstAttribute="bottom" secondItem="9lj-Cc-vdn" secondAttribute="top" id="F1q-PK-PjF"/>
+                            <constraint firstAttribute="trailing" secondItem="myl-6X-7z5" secondAttribute="trailing" id="c2Y-JN-dro"/>
+                            <constraint firstItem="myl-6X-7z5" firstAttribute="top" secondItem="hKZ-S0-a1W" secondAttribute="bottom" constant="624" id="iHZ-7Z-Z1b"/>
+                            <constraint firstItem="myl-6X-7z5" firstAttribute="leading" secondItem="j7F-zF-8Gx" secondAttribute="leading" id="wbf-Ca-ld5"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="cpk-aL-UCl"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="predictionLabel" destination="9jL-4p-eir" id="6pb-vW-ZWC"/>
+                        <outlet property="timeLabel" destination="mB6-Pf-bCS" id="e0A-J6-RmJ"/>
+                        <outlet property="videoPreview" destination="j7F-zF-8Gx" id="Mjf-4x-yyY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0sf-Mo-WSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3134.7826086956525" y="-215.625"/>
+        </scene>
+        <!--Portal-->
+        <scene sceneID="GjD-yc-xHb">
+            <objects>
+                <viewController id="49m-aH-Dl8" customClass="PortalViewController" customModule="Where_To" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wxi-gy-Tuk"/>
+                        <viewControllerLayoutGuide type="bottom" id="bZp-lA-8t1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Igb-fE-TdL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2P1-Fm-6Uq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="810"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Portal" image="person.circle.fill" catalog="system" landscapeImage="person.crop.circle.fill" selectedImage="person.crop.circle.fill" id="v6u-5k-wbf"/>
+                    <connections>
+                        <outlet property="view" destination="2P1-Fm-6Uq" id="BmK-KL-5YR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SqF-md-Moe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-667" y="717"/>
+        </scene>
+        <!--Buildings-->
+        <scene sceneID="qEA-n0-Hq8">
+            <objects>
+                <viewController id="i4Y-2I-u1t" customClass="OnlineMapViewController" customModule="Where_To" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6SG-sc-tWr"/>
+                        <viewControllerLayoutGuide type="bottom" id="bjh-TM-eH1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DfT-kA-pRD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axq-IY-44q">
+                                <rect key="frame" x="-11" y="-11" width="425" height="824"/>
+                                <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="axq-IY-44q" secondAttribute="bottom" constant="-49" id="8uV-a6-bHx"/>
+                            <constraint firstItem="axq-IY-44q" firstAttribute="leading" secondItem="DfT-kA-pRD" secondAttribute="leadingMargin" constant="-31" id="HmD-YP-mL9"/>
+                            <constraint firstAttribute="trailing" secondItem="axq-IY-44q" secondAttribute="trailing" id="jMz-Ib-rv2"/>
+                            <constraint firstItem="axq-IY-44q" firstAttribute="top" secondItem="DfT-kA-pRD" secondAttribute="topMargin" constant="-55" id="lxC-9z-vmw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Buildings" image="mappin.circle.fill" catalog="system" landscapeImage="mappin.circle.fill" id="wxt-l9-a3T"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gx-fM-YGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="499"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController storyboardIdentifier="Tab Bar Controller" title="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WJn-xN-tk0"/>
+                    <tabBar key="tabBar" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" destinationCreationSelector="FirstViewController" id="u7Y-xg-7CH"/>
+                        <segue destination="i4Y-2I-u1t" kind="relationship" relationship="viewControllers" id="m5T-kN-Q9y"/>
+                        <segue destination="49m-aH-Dl8" kind="relationship" relationship="viewControllers" id="365-Le-NSy"/>
+                        <segue destination="Ubm-sJ-h08" kind="relationship" relationship="viewControllers" id="qUt-kg-s9g"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Vision-->
+        <scene sceneID="i1f-87-mO8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ubm-sJ-h08" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Vision" image="eye" catalog="system" id="eiO-j9-3N9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2jq-GG-bz5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xnd-jH-ZY8" kind="relationship" relationship="rootViewController" id="dTH-HT-yTw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCU-BA-sBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2316" y="-222"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="mappin.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
